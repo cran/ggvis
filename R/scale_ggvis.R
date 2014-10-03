@@ -21,7 +21,8 @@
 #' @param domain The domain of the scale, representing the set of data values.
 #'   For ordinal scales, a character vector; for quantitative scales, a numeric
 #'   vector of length two. Either value (but not both) may be NA, in which
-#'   case \code{domainMin} or \code{domainMax} is set.
+#'   case \code{domainMin} or \code{domainMax} is set. For dynamic scales, this
+#'   can also be a reactive which returns the appropriate type of vector.
 #' @param range The range of the scale, representing the set of visual values.
 #'   For numeric values, the range can take the form of a two-element array with
 #'   minimum and maximum values. For ordinal data, the range may by an array of
@@ -223,7 +224,8 @@ scale_domain_data <- function(x) {
 
 
 expand_range <- function(range, mult = 0) {
-  if (length(range) != 2) stop("range must have 2 values")
+  if (length(range) == 0) return(range)
+  if (length(range) != 2) stop("range must have either 0 or 2 values")
   if (length(mult) == 1) mult <- c(mult, mult)
 
   range + diff(range) * mult * c(-1, 1)

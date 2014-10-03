@@ -53,7 +53,7 @@
 #' # unique values that you want to preserve. If you have many unique
 #' # values and you want to bin, use layer_histogram
 #' cocaine %>% ggvis(~price) %>% layer_bars()
-#' cocaine %>% ggvis(~price) %>% layer_histograms(binwidth = 100)
+#' cocaine %>% ggvis(~price) %>% layer_histograms(width = 100)
 #'
 #' # If you have unique x values, you can use layer_bars() as an alternative
 #' # to layer_points()
@@ -71,9 +71,8 @@
 #' ToothGrowth %>% group_by(dose) %>%
 #'   ggvis(x = ~supp, y = ~len, fill = ~dose) %>% layer_bars()
 #' # If grouping var is categorical, grouping is done automatically
-#' # FIXME: Currently broken; see #177
-#' # cocaine %>% ggvis(x = ~state, fill = ~as.factor(month)) %>%
-#' #   layer_bars()
+#' cocaine %>% ggvis(x = ~state, fill = ~as.factor(month)) %>%
+#'   layer_bars()
 layer_bars <- function(vis, ..., stack = TRUE, width = NULL) {
   new_props <- merge_props(cur_props(vis), props(...))
 
@@ -103,6 +102,7 @@ layer_bars <- function(vis, ..., stack = TRUE, width = NULL) {
     }
 
     vis <- layer_f(vis, function(v) {
+      v <- add_props(v, .props = new_props)
       v <- auto_group(v, exclude = c("x", "y"))
       v <- compute_count(v, x_var, y_var)
 
@@ -119,6 +119,7 @@ layer_bars <- function(vis, ..., stack = TRUE, width = NULL) {
 
   } else {
     vis <- layer_f(vis, function(v) {
+      v <- add_props(v, .props = new_props)
       v <- compute_count(v, x_var, y_var)
       v <- compute_align(v, ~x_, length = width)
       if (stack) {

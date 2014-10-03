@@ -21,7 +21,7 @@ function (d3, topojson) {
 //---------------------------------------------------
 
   var vg = {
-    version:  "1.3.4", // semantic versioning
+    version:  "1.4.2", // semantic versioning
     d3:       d3,      // stash d3 for use in property functions
     topojson: topojson // stash topojson similarly
   };
@@ -70,6 +70,8 @@ vg.boolean = function(s) { return !!s; };
 // utility functions
 
 vg.identity = function(x) { return x; };
+
+vg.true = function() { return true; };
 
 vg.extend = function(obj) {
   for (var x, name, i=1, len=arguments.length; i<len; ++i) {
@@ -239,6 +241,15 @@ vg.error = function(msg) {
 // are we running in node.js?
 // via timetler.com/2012/10/13/environment-detection-in-javascript/
 vg.config.isNode = typeof exports !== 'undefined' && this.exports !== exports;
+
+// Allows domain restriction when using data loading via XHR.
+// To enable, set it to a list of allowed domains
+// e.g., ['wikipedia.org', 'eff.org']
+vg.config.domainWhiteList = false;
+
+// If true, disable potentially unsafe transforms (filter, formula)
+// involving possible JavaScript injection attacks.
+vg.config.safeMode = false;
 
 // base url for loading external data files
 // used only for server-side operation
@@ -578,9 +589,9 @@ var vg_gradient_id = 0;vg.canvas = {};vg.canvas.path = (function() {
     var segs = arcToSegments(ex, ey, rx, ry, large, sweep, rot, x, y);
     for (var i=0; i<segs.length; i++) {
       var bez = segmentToBezier.apply(null, segs[i]);
-      bounds.add(bez[0]-l, bez[1]-t);
-      bounds.add(bez[2]-l, bez[3]-t);
-      bounds.add(bez[4]-l, bez[5]-t);
+      bounds.add(bez[0], bez[1]);
+      bounds.add(bez[2], bez[3]);
+      bounds.add(bez[4], bez[5]);
     }
   }
 
@@ -2373,6 +2384,12 @@ var vg_gradient_id = 0;vg.canvas = {};vg.canvas.path = (function() {
     this.setAttribute("height", h);
   }
 
+  function cssClass(def) {
+    var cls = "type-" + def.type;
+    if (def.name) cls += " " + def.name;
+    return cls;
+  }
+
   function draw(tag, attr, nest) {
     return function(g, scene, index) {
       drawMark(g, scene, index, "mark_", tag, attr, nest);
@@ -2386,7 +2403,9 @@ var vg_gradient_id = 0;vg.canvas = {};vg.canvas.path = (function() {
         notG = (tag !== "g"),
         p = (p = grps[index+1]) // +1 to skip group background rect
           ? d3.select(p)
-          : g.append("g").attr("id", "g"+(++mark_id));
+          : g.append("g")
+             .attr("id", "g"+(++mark_id))
+             .attr("class", cssClass(scene.def));
 
     var id = p.attr("id"),
         s = "#" + id + " > " + tag,
@@ -2788,9 +2807,24 @@ function vg_load_isFile(url) {
 
 function vg_load_xhr(url, callback) {
   vg.log("LOAD: " + url);
+  if (!vg_url_check(url)) {
+    vg.error("URL is not whitelisted: " + url);
+    return;
+  }
   d3.xhr(url, function(err, resp) {
     if (resp) resp = resp.responseText;
     callback(err, resp);
+  });
+}
+
+function vg_url_check(url) {
+  if (!vg.config.domainWhiteList) return true;
+  var a = document.createElement("a");
+  a.href = url;
+  var domain = a.hostname.toLowerCase();
+  return vg.config.domainWhiteList.some(function(d) {
+    return d === domain ||
+      domain.lastIndexOf("."+d) === (domain.length - d.length - 1);
   });
 }
 
@@ -3669,7 +3703,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
         "stdev":    "stdev",
         "median":   "median"
       };
-  
+
   function reduce(data) {
     var min = +Infinity,
         max = -Infinity,
@@ -3679,7 +3713,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
         i, len, v, delta;
 
     var list = (vg.isArray(data) ? data : data.values || []).map(value);
-    
+
     // compute aggregates
     for (i=0, len=list.length; i<len; ++i) {
       v = list[i];
@@ -3691,7 +3725,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
       M2 = M2 + delta * (v - mean);
     }
     M2 = M2 / (len - 1);
-    
+
     var o = vg.isArray(data) ? {} : data;
     if (median) {
       list.sort(vg.numcmp);
@@ -3707,7 +3741,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
     o[output.mean] = mean;
     o[output.variance] = M2;
     o[output.stdev] = Math.sqrt(M2);
-    
+
     if (assign) {
       list = (vg.isArray(data) ? data : data.values);
       v = {};
@@ -3722,12 +3756,12 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
       for (i=0, len=list.length; i<len; ++i) {
         list[i].stats = v;
       }
-      o = list;
+      if (vg.isArray(data)) o = list;
     }
-    
+
     return o;
   }
-  
+
   function stats(data) {
     if (vg.isArray(data)) {
       return reduce(data);
@@ -3735,12 +3769,12 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
       return (data.values || []).map(reduce);
     }
   }
-  
+
   stats.median = function(bool) {
     median = bool || false;
     return stats;
   };
-  
+
   stats.value = function(field) {
     value = vg.accessor(field);
     return stats;
@@ -3750,7 +3784,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
     assign = b;
     return stats;
   };
-  
+
   stats.output = function(map) {
     vg.keys(output).forEach(function(k) {
       if (map[k] !== undefined) {
@@ -3759,7 +3793,7 @@ vg.data.force.dependencies = ["links"];vg.data.formula = (function() {
     });
     return stats;
   };
-  
+
   return stats;
 };vg.data.treemap = function() {
   var layout = d3.layout.treemap()
@@ -4241,7 +4275,7 @@ vg.parse.data = function(spec, callback) {
     }, {}));
   return df;
 };vg.parse.expr = (function() {
-  
+
   var CONSTANT = {
   	"E":       "Math.E",
   	"LN2":     "Math.LN2",
@@ -4273,10 +4307,15 @@ vg.parse.data = function(spec, callback) {
   	"sqrt":   "Math.sqrt",
   	"tan":    "Math.tan"
   };
-  
+
   var lexer = /([\"\']|[\=\<\>\~\&\|\?\:\+\-\/\*\%\!\^\,\;\[\]\{\}\(\) ]+)/;
-      
+
   return function(x) {
+    if (vg.config.safeMode) {
+      vg.error("Safe mode: Expression parsing disabled.");
+      return vg.true;
+    }
+
     var tokens = x.split(lexer),
         t, v, i, n, sq, dq;
 
@@ -4292,10 +4331,10 @@ vg.parse.data = function(spec, callback) {
         tokens[i] = FUNCTION[t];
       }
     }
-    
+
     return Function("d", "index", "data", "return ("+tokens.join("")+");");
   };
-  
+
 })();vg.parse.legends = (function() {
 
   function legends(spec, legends, scales) {
@@ -4340,16 +4379,17 @@ vg.parse.data = function(spec, callback) {
 })();vg.parse.mark = function(mark) {
   var props = mark.properties,
       group = mark.marks;
-  
+
   // parse mark property definitions
   vg.keys(props).forEach(function(k) {
     props[k] = vg.parse.properties(mark.type, props[k]);
   });
+
   // parse delay function
   if (mark.delay) {
     mark.delay = vg.parse.properties(mark.type, {delay: mark.delay});
   }
-      
+
   // parse mark data definition
   if (mark.from) {
     var name = mark.from.data,
@@ -4359,12 +4399,12 @@ vg.parse.data = function(spec, callback) {
       return tx(data, db, group);
     };
   }
-  
+
   // recurse if group type
   if (group) {
     mark.marks = group.map(vg.parse.mark);
   }
-      
+    
   return mark;
 };vg.parse.marks = function(spec, width, height) {
   return {
@@ -4840,11 +4880,15 @@ vg.scene.fontString = function(o) {
 vg.scene.item = function(mark) {
   return new vg.scene.Item(mark);
 };vg.scene.visit = function(node, func) {
-  var i, n, items;
+  var i, n, s, m, items;
   if (func(node)) return true;
-  if (items = node.items) {
-    for (i=0, n=items.length; i<n; ++i) {
-      if (vg.scene.visit(items[i], func)) return true;
+
+  var sets = ["items", "axisItems", "legendItems"];
+  for (s=0, m=sets.length; s<m; ++s) {
+    if (items = node[sets[s]]) {
+      for (i=0, n=items.length; i<n; ++i) {
+        if (vg.scene.visit(items[i], func)) return true;
+      }
     }
   }
 };vg.scene.build = (function() {
@@ -5238,7 +5282,9 @@ vg.scene.item = function(mark) {
         item, i, len;
         
     if (type==="area" || type==="line") {
-      items[0].bounds = func(items[0], bounds);
+      if (items.length) {
+        items[0].bounds = func(items[0], bounds);
+      }
     } else {
       for (i=0, len=items.length; i<len; ++i) {
         bounds.union(itemBounds(items[i], func, opt));
@@ -5404,6 +5450,11 @@ vg.scene.item = function(mark) {
   
   var prototype = trans.prototype;
   
+  var skip = {
+    "text": 1,
+    "url":  1
+  };
+  
   prototype.interpolate = function(item, values) {
     var key, curr, next, interp, list = null;
 
@@ -5411,8 +5462,11 @@ vg.scene.item = function(mark) {
       curr = item[key];
       next = values[key];      
       if (curr !== next) {
-        if (key === "text" || curr === undefined) {
-          // skip interpolation for text labels or undefined start values
+        if (skip[key] || curr === undefined) {
+          // skip interpolation for specific keys or undefined start values
+          item[key] = next;
+        } else if (typeof curr === "number" && !isFinite(curr)) {
+          // for NaN or infinite numeric values, skip to final value
           item[key] = next;
         } else {
           // otherwise lookup interpolator

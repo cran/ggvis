@@ -23,3 +23,21 @@ test_that("compute_stack works as expected", {
   expected <- expected[order(dat$g2), ] %>% as.data.frame()
   expect_equal(stacked[c("stack_lwr_", "stack_upr_")], expected)
 })
+
+
+test_that("Zero-row inputs", {
+  res <- mtcars[0,] %>% compute_stack(~wt, ~cyl)
+  expect_equal(nrow(res), 0)
+  expect_true(setequal(
+    names(res),
+    c(names(mtcars), "group__", "stack_upr_", "stack_lwr_"))
+  )
+
+  # Grouped
+  res <- mtcars %>% group_by(cyl) %>% dplyr::filter(FALSE) %>% compute_stack(~wt, ~cyl)
+  expect_equal(nrow(res), 0)
+  expect_true(setequal(
+    names(res),
+    c(names(mtcars), "group__", "stack_upr_", "stack_lwr_"))
+  )
+})

@@ -76,12 +76,27 @@ count_vector <- function(x, weight = NULL, ...) {
   if (is.null(weight)) {
     weight <- rep.int(1, length(x))
   }
+
+  # Preserve date and time types
+  if (inherits(x, "POSIXct")) {
+    tz <- attr(x, "tzone", TRUE)
+    restore <- function(x) as.POSIXct(x, origin = "1970-01-01", tz = tz)
+  } else if (inherits(x, "Date")) {
+    restore <- function(x) structure(x, class = "Date")
+  } else {
+    restore <- identity
+  }
+
   counts <- unname(as.vector(tapply(weight, x, sum, na.rm = TRUE)))
 
   if (is.factor(x)) {
-    # Get the factor levels, preserving factor-ness. Order should align
-    # with counts.
-    values <- unique(x)
+    na_idx <- is.na(counts)
+    # Factor levels that aren't represented in x result in NA, which we'll
+    # drop.
+    counts <- counts[!na_idx]
+    # Get the factor levels, preserving factor-ness and order of factor levels.
+    # Order should align with counts.
+    values <- factor(levels(x), levels = levels(x))[!na_idx]
   } else {
     # Need to get unique values this way instead of using names(counts),
     # because names are strings but the x values aren't always strings.
@@ -90,7 +105,7 @@ count_vector <- function(x, weight = NULL, ...) {
 
   data.frame(
     count_ = counts,
-    x_ = values,
+    x_ = restore(values),
     stringsAsFactors = FALSE
   )
 }

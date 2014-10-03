@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Examples of ggvis graphics</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<!--
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{ggvis basics}
+-->
+
+<p>ggvis is a data visualization package for R which lets you:</p>
+
+<ul>
+<li><p>Declaratively describe data graphics with a syntax similar in spirit to 
+ggplot2.</p></li>
+<li><p>Create rich interactive graphics that you can play with locally in Rstudio
+or in your browser.</p></li>
+<li><p>Leverage <a href="http://www.rstudio.com/shiny/">shiny</a>&#39;s infrastructure to publish
+interactive graphics usable from any browser (either within your company
+or to the world).</p></li>
+</ul>
+
+<p>The goal is to combine the best of R (e.g. every modelling function you can imagine) and the best of the web (everyone has a web browser). Data manipulation and transformation are done in R, and the graphics are rendered in a web browser, using <a href="https://github.com/trifacta/vega/">Vega</a>. For RStudio users, ggvis graphics display in a viewer panel, which is possible because RStudio is a web browser.</p>
+
+<h2>Examples of ggvis graphics</h2>
+
+<p>Histogram:</p>
+
+<p>&lt;!&ndash;html_preserve&ndash;&gt;<div id="plot_id502032221-container" class="ggvis-output-container"></p>
+
+<div id="plot_id502032221" class="ggvis-output"></div>
+
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id502032221_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id502032221" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id502032221_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id502032221" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id502032221_download" class="ggvis-download" data-plot-id="plot_id502032221">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+
+<p></div>
+<script type="text/javascript">
+var plot<em>id502032221_spec = {
+    &quot;data&quot; : [
+        {
+            &quot;name&quot; : &quot;faithful0/bin1/stack2&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;xmin</em>&quot; : &quot;number&quot;,
+                    &quot;xmax<em>&quot; : &quot;number&quot;,
+                    &quot;stack_upr</em>&quot; : &quot;number&quot;,
+                    &quot;stack<em>lwr</em>&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;xmin<em>\&quot;,\&quot;xmax</em>\&quot;,\&quot;stack<em>upr</em>\&quot;,\&quot;stack<em>lwr</em>\&quot;\n1.5,1.7,3,0\n1.7,1.9,37,0\n1.9,2.1,26,0\n2.1,2.3,16,0\n2.3,2.5,10,0\n2.5,2.7,2,0\n2.7,2.9,3,0\n2.9,3.1,1,0\n3.1,3.3,0,0\n3.3,3.5,8,0\n3.5,3.7,7,0\n3.7,3.9,14,0\n3.9,4.1,25,0\n4.1,4.3,27,0\n4.3,4.5,36,0\n4.5,4.7,31,0\n4.7,4.9,19,0\n4.9,5.1,7,0&quot;
+        },
+        {
+            &quot;name&quot; : &quot;scale/x&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;domain&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;domain\&quot;\n1.32\n5.28&quot;
+        },
+        {
+            &quot;name&quot; : &quot;scale/y&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;domain&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;domain\&quot;\n0\n38.85&quot;
+        }
+    ],
+    &quot;scales&quot; : [
+        {
+            &quot;name&quot; : &quot;x&quot;,
+            &quot;domain&quot; : {
+                &quot;data&quot; : &quot;scale/x&quot;,
+                &quot;field&quot; : &quot;data.domain&quot;
+            },
+            &quot;zero&quot; : false,
+            &quot;nice&quot; : false,
+            &quot;clamp&quot; : false,
+            &quot;range&quot; : &quot;width&quot;
+        },
+        {
+            &quot;name&quot; : &quot;y&quot;,
+            &quot;domain&quot; : {
+                &quot;data&quot; : &quot;scale/y&quot;,
+                &quot;field&quot; : &quot;data.domain&quot;
+            },
+            &quot;zero&quot; : false,
+            &quot;nice&quot; : false,
+            &quot;clamp&quot; : false,
+            &quot;range&quot; : &quot;height&quot;
+        }
+    ],
+    &quot;marks&quot; : [
+        {
+            &quot;type&quot; : &quot;rect&quot;,
+            &quot;properties&quot; : {
+                &quot;update&quot; : {
+                    &quot;stroke&quot; : {
+                        &quot;value&quot; : &quot;#000000&quot;
+                    },
+                    &quot;fill&quot; : {
+                        &quot;value&quot; : &quot;#ffffdd&quot;
+                    },
+                    &quot;x&quot; : {
+                        &quot;scale&quot; : &quot;x&quot;,
+                        &quot;field&quot; : &quot;data.xmin<em>&quot;
+                    },
+                    &quot;x2&quot; : {
+                        &quot;scale&quot; : &quot;x&quot;,
+                        &quot;field&quot; : &quot;data.xmax</em>&quot;
+                    },
+                    &quot;y&quot; : {
+                        &quot;scale&quot; : &quot;y&quot;,
+                        &quot;field&quot; : &quot;data.stack<em>upr</em>&quot;
+                    },
+                    &quot;y2&quot; : {
+                        &quot;scale&quot; : &quot;y&quot;,
+                        &quot;field&quot; : &quot;data.stack<em>lwr</em>&quot;
+                    }
+                },
+                &quot;hover&quot; : {
+                    &quot;fill&quot; : {
+                        &quot;value&quot; : &quot;#eebbbb&quot;
+                    }
+                },
+                &quot;ggvis&quot; : {
+                    &quot;data&quot; : {
+                        &quot;value&quot; : &quot;faithful0/bin1/stack2&quot;
+                    }
+                }
+            },
+            &quot;from&quot; : {
+                &quot;data&quot; : &quot;faithful0/bin1/stack2&quot;
+            }
+        }
+    ],
+    &quot;width&quot; : 400,
+    &quot;height&quot; : 150,
+    &quot;legends&quot; : [],
+    &quot;axes&quot; : [
+        {
+            &quot;type&quot; : &quot;x&quot;,
+            &quot;scale&quot; : &quot;x&quot;,
+            &quot;orient&quot; : &quot;bottom&quot;,
+            &quot;title&quot; : &quot;eruptions&quot;,
+            &quot;layer&quot; : &quot;back&quot;,
+            &quot;grid&quot; : true
+        },
+        {
+            &quot;type&quot; : &quot;y&quot;,
+            &quot;scale&quot; : &quot;y&quot;,
+            &quot;orient&quot; : &quot;left&quot;,
+            &quot;title&quot; : &quot;count&quot;,
+            &quot;layer&quot; : &quot;back&quot;,
+            &quot;grid&quot; : true
+        }
+    ],
+    &quot;padding&quot; : null,
+    &quot;ggvis_opts&quot; : {
+        &quot;keep_aspect&quot; : false,
+        &quot;resizable&quot; : true,
+        &quot;padding&quot; : {},
+        &quot;duration&quot; : 250,
+        &quot;renderer&quot; : &quot;svg&quot;,
+        &quot;hover_duration&quot; : 0,
+        &quot;width&quot; : 400,
+        &quot;height&quot; : 150
+    },
+    &quot;handlers&quot; : null
+};
+ggvis.getPlot(&quot;plot_id502032221&quot;).parseSpec(plot_id502032221_spec);
+</script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
+
+<p>Scatterplot with smooth curve and interactive control:</p>
+
+<pre><code>#&gt; Warning: Can&#39;t output dynamic/interactive ggvis plots in a knitr document.
+#&gt; Generating a static (non-dynamic, non-interactive) version of the plot.
+</code></pre>
+
+<p>&lt;!&ndash;html_preserve&ndash;&gt;<div id="plot_id519388471-container" class="ggvis-output-container"></p>
+
+<div id="plot_id519388471" class="ggvis-output"></div>
+
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id519388471_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id519388471" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id519388471_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id519388471" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id519388471_download" class="ggvis-download" data-plot-id="plot_id519388471">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+
+<p></div>
+<script type="text/javascript">
+var plot<em>id519388471_spec = {
+    &quot;data&quot; : [
+        {
+            &quot;name&quot; : &quot;mtcars0&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;wt&quot; : &quot;number&quot;,
+                    &quot;mpg&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
+        },
+        {
+            &quot;name&quot; : &quot;mtcars0/model_prediction1&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;pred</em>&quot; : &quot;number&quot;,
+                    &quot;resp<em>&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;pred</em>\&quot;,\&quot;resp<em>\&quot;\n1.513,32.08897233857\n1.56250632911392,31.6878645869701\n1.61201265822785,31.2816303797919\n1.66151898734177,30.8703709543688\n1.7110253164557,30.4541875480347\n1.76053164556962,30.0331813981232\n1.81003797468354,29.6074537419678\n1.85954430379747,29.1771058169022\n1.90905063291139,28.7422388602601\n1.95855696202532,28.3001719301537\n2.00806329113924,27.834621969428\n2.05756962025316,27.3476575600419\n2.10707594936709,26.84497968394\n2.15658227848101,26.3322893230667\n2.20608860759494,25.8152874593666\n2.25559493670886,25.2996750747841\n2.30510126582278,24.7911531512637\n2.35460759493671,24.29542267075\n2.40411392405063,23.8181846151875\n2.45362025316456,23.3651399665205\n2.50312658227848,22.955253039598\n2.55263291139241,22.6138488714952\n2.60213924050633,22.3275852300224\n2.65164556962025,22.0817586181852\n2.70115189873418,21.8616655389892\n2.7506582278481,21.65260249544\n2.80016455696203,21.4398659905432\n2.84967088607595,21.2087525273044\n2.89917721518987,20.953335722037\n2.9486835443038,20.7158424594628\n2.99818987341772,20.4957065225374\n3.04769620253165,20.2829337645837\n3.09720253164557,20.0675300389245\n3.14670886075949,19.8395011988825\n3.19621518987342,19.5888530977805\n3.24572151898734,19.2971559094315\n3.29522784810127,18.9444093670088\n3.34473417721519,18.5670026794964\n3.39424050632911,18.2056968860288\n3.44374683544304,17.9009022641924\n3.49325316455696,17.620602502374\n3.54275949367089,17.3400153015964\n3.59226582278481,17.079077805285\n3.64177215189873,16.8175887231322\n3.69127848101266,16.5575726926136\n3.74078481012658,16.3083303048321\n3.79029113924051,16.0791621508901\n3.83979746835443,15.8793688218903\n3.88930379746835,15.7018119854881\n3.93881012658228,15.5259429561214\n3.9883164556962,15.3517253848296\n4.03782278481013,15.1793328075288\n4.08732911392405,15.0089387601353\n4.13683544303798,14.8407167785652\n4.1863417721519,14.6748403987346\n4.23584810126582,14.5114831565596\n4.28535443037975,14.3508185879563\n4.33486075949367,14.193020228841\n4.3843670886076,14.0382616151298\n4.43387341772152,13.8867162827388\n4.48337974683544,13.7385577675841\n4.53288607594937,13.5939596055819\n4.58239240506329,13.4530953326483\n4.63189873417722,13.3161384846995\n4.68140506329114,13.1832625976516\n4.73091139240506,13.0546412074207\n4.78041772151899,12.930447849923\n4.82992405063291,12.8108560610747\n4.87943037974684,12.6960393767918\n4.92893670886076,12.5861713329905\n4.97844303797468,12.4814254655869\n5.02794936708861,12.3819753104973\n5.07745569620253,12.2879944036376\n5.12696202531646,12.1996562809241\n5.17646835443038,12.117134478273\n5.2259746835443,12.0406025316002\n5.27548101265823,11.9702339768221\n5.32498734177215,11.9062023498547\n5.37449367088608,11.8486811866141\n5.424,11.7978440230166&quot;
+        },
+        {
+            &quot;name&quot; : &quot;scale/x&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;domain&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+        },
+        {
+            &quot;name&quot; : &quot;scale/y&quot;,
+            &quot;format&quot; : {
+                &quot;type&quot; : &quot;csv&quot;,
+                &quot;parse&quot; : {
+                    &quot;domain&quot; : &quot;number&quot;
+                }
+            },
+            &quot;values&quot; : &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
+        }
+    ],
+    &quot;scales&quot; : [
+        {
+            &quot;name&quot; : &quot;x&quot;,
+            &quot;domain&quot; : {
+                &quot;data&quot; : &quot;scale/x&quot;,
+                &quot;field&quot; : &quot;data.domain&quot;
+            },
+            &quot;zero&quot; : false,
+            &quot;nice&quot; : false,
+            &quot;clamp&quot; : false,
+            &quot;range&quot; : &quot;width&quot;
+        },
+        {
+            &quot;name&quot; : &quot;y&quot;,
+            &quot;domain&quot; : {
+                &quot;data&quot; : &quot;scale/y&quot;,
+                &quot;field&quot; : &quot;data.domain&quot;
+            },
+            &quot;zero&quot; : false,
+            &quot;nice&quot; : false,
+            &quot;clamp&quot; : false,
+            &quot;range&quot; : &quot;height&quot;
+        }
+    ],
+    &quot;marks&quot; : [
+        {
+            &quot;type&quot; : &quot;symbol&quot;,
+            &quot;properties&quot; : {
+                &quot;update&quot; : {
+                    &quot;fill&quot; : {
+                        &quot;value&quot; : &quot;#000000&quot;
+                    },
+                    &quot;size&quot; : {
+                        &quot;value&quot; : 50
+                    },
+                    &quot;x&quot; : {
+                        &quot;scale&quot; : &quot;x&quot;,
+                        &quot;field&quot; : &quot;data.wt&quot;
+                    },
+                    &quot;y&quot; : {
+                        &quot;scale&quot; : &quot;y&quot;,
+                        &quot;field&quot; : &quot;data.mpg&quot;
+                    }
+                },
+                &quot;ggvis&quot; : {
+                    &quot;data&quot; : {
+                        &quot;value&quot; : &quot;mtcars0&quot;
+                    }
+                }
+            },
+            &quot;from&quot; : {
+                &quot;data&quot; : &quot;mtcars0&quot;
+            }
+        },
+        {
+            &quot;type&quot; : &quot;line&quot;,
+            &quot;properties&quot; : {
+                &quot;update&quot; : {
+                    &quot;stroke&quot; : {
+                        &quot;value&quot; : &quot;#000000&quot;
+                    },
+                    &quot;strokeWidth&quot; : {
+                        &quot;value&quot; : 2
+                    },
+                    &quot;x&quot; : {
+                        &quot;scale&quot; : &quot;x&quot;,
+                        &quot;field&quot; : &quot;data.pred</em>&quot;
+                    },
+                    &quot;y&quot; : {
+                        &quot;scale&quot; : &quot;y&quot;,
+                        &quot;field&quot; : &quot;data.resp_&quot;
+                    },
+                    &quot;fill&quot; : {
+                        &quot;value&quot; : &quot;transparent&quot;
+                    }
+                },
+                &quot;ggvis&quot; : {
+                    &quot;data&quot; : {
+                        &quot;value&quot; : &quot;mtcars0/model_prediction1&quot;
+                    }
+                }
+            },
+            &quot;from&quot; : {
+                &quot;data&quot; : &quot;mtcars0/model_prediction1&quot;
+            }
+        }
+    ],
+    &quot;width&quot; : 300,
+    &quot;height&quot; : 300,
+    &quot;legends&quot; : [],
+    &quot;axes&quot; : [
+        {
+            &quot;type&quot; : &quot;x&quot;,
+            &quot;scale&quot; : &quot;x&quot;,
+            &quot;orient&quot; : &quot;bottom&quot;,
+            &quot;layer&quot; : &quot;back&quot;,
+            &quot;grid&quot; : true,
+            &quot;title&quot; : &quot;wt&quot;
+        },
+        {
+            &quot;type&quot; : &quot;y&quot;,
+            &quot;scale&quot; : &quot;y&quot;,
+            &quot;orient&quot; : &quot;left&quot;,
+            &quot;layer&quot; : &quot;back&quot;,
+            &quot;grid&quot; : true,
+            &quot;title&quot; : &quot;mpg&quot;
+        }
+    ],
+    &quot;padding&quot; : null,
+    &quot;ggvis_opts&quot; : {
+        &quot;keep_aspect&quot; : false,
+        &quot;resizable&quot; : true,
+        &quot;padding&quot; : {},
+        &quot;duration&quot; : 250,
+        &quot;renderer&quot; : &quot;svg&quot;,
+        &quot;hover_duration&quot; : 0,
+        &quot;width&quot; : 300,
+        &quot;height&quot; : 300
+    },
+    &quot;handlers&quot; : null
+};
+ggvis.getPlot(&quot;plot_id519388471&quot;).parseSpec(plot_id519388471_spec);
+</script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
+
+<h2>Getting started with ggvis</h2>
+
+<ul>
+<li>See some <a href="cookbook.html">recipes</a> for common tasks.</li>
+<li>Learn <a href="ggvis-basics.html">ggvis basics</a>.</li>
+<li>Read more about <a href="interactivity.html">interactive graphics</a>.</li>
+</ul>
+
+<h2>More advanced topics</h2>
+
+<ul>
+<li>How to control <a href="axes-legends.html">axes and legends</a>.</li>
+<li>How to use <a href="properties-scales.html">properties and scales</a>.</li>
+<li>Learn about <a href="layers.html">layers</a>.</li>
+<li>Plumbing: about ggvis&#39;s <a href="data-hierarchy.html">data hierarchy</a>.</li>
+</ul>
+
+<h2>More about ggvis</h2>
+
+<ul>
+<li>Differences and similarities to <a href="ggplot2.html">ggplot2</a>.</li>
+<li>The relationship between ggvis and <a href="vega.html">Vega</a>.</li>
+</ul>
+
+</body>
+
+</html>

@@ -49,6 +49,7 @@ as.vega.ggvis <- function(x, session = NULL, dynamic = FALSE, ...) {
 
   datasets <- static_datasets(data_table, data_ids)
   scale_datasets <- static_datasets(scale_data_table, names(scale_data_table))
+  check_scales_complete(x)
 
   # Each of these operations results in a more completely specified (and still
   # valid) ggvis object
@@ -147,7 +148,7 @@ as.vega.mark <- function(mark, in_group = FALSE) {
   }
 
   if (!is.null(key)) {
-    m$key <- paste0("data.", prop_label(key))
+    m$key <- paste0("data.", safe_vega_var(prop_label(key)))
   }
   m
 }
@@ -186,16 +187,14 @@ as.vega.ggvis_legend <- as.vega.ggvis_axis
 
 #' @export
 as.vega.data.frame <- function(x, name, ...) {
-  # For CSV output, we need to unescape periods, which were turned into \. by
-  # prop_label().
-  names(x) <- gsub("\\.", ".", names(x), fixed = TRUE)
+  # Figure out correct vega parsers for non-string columns
+  parsers <- drop_nulls(lapply(x, vega_data_parser))
 
   list(list(
     name = name,
     format = list(
       type = "csv",
-      # Figure out correct vega parsers for non-string columns
-      parse = unlist(lapply(x, vega_data_parser))
+      parse = parsers
     ),
     values = to_csv(x)
   ))
@@ -213,7 +212,7 @@ as.vega.grouped_df <- function(x, name, ...) {
     source = paste0(name, "_flat"),
     transform = list(list(
       type = "treefacet",
-      keys = as.list(paste0("data.", group_vars))
+      keys = as.list(paste0("data.", safe_vega_var(group_vars)))
     ))
   )
 

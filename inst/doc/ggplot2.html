@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<!--
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{ggvis vs ggplot2}
+-->
+
+<p>If you&#39;re familiar with ggplot2, learning ggvis shouldn&#39;t be too hard - it
+borrows from many familiar concepts.  Note that ggvis is still very young,
+and many of the interfaces are likely to change as we learn more about what
+works well.</p>
+
+<ul>
+<li><p>Basic naming conversions: </p>
+
+<ul>
+<li>layer, geom -&gt; layer function</li>
+<li>stat -&gt; compute function</li>
+<li><code>aes()</code> -&gt; <code>props()</code></li>
+<li><code>ggplot()</code> -&gt; <code>ggvis()</code></li>
+</ul></li>
+<li><p>ggvis has a function interface so you combine components using <code>%&gt;%</code>, 
+not <code>+</code> as in ggplot2.</p></li>
+<li><p>Facetting is not currently supported, and when it is supported, it&#39;s more
+like to resemble <a href="http://vita.had.co.nz/papers/embedded-plots.html">embedded plots</a>
+than facetting in ggplot2.</p></li>
+<li><p>In ggplot2, the definition of a geom was somewhat blurred, because of things
+like <code>geom_histogram()</code> which combined <code>geom_bar()</code> with <code>stat_bin()</code>. The
+distinction is more clear in ggvis: pure geoms correspond to <code>emit_*</code> which
+emit marks, and combined geoms and stats correspond to layers.</p></li>
+<li><p>Using <code>ggvis()</code> without adding any layers is analogous to <code>qplot()</code>.</p></li>
+<li><p>Vega provides a smaller set of scales than ggplot2 (just ordinal,
+quantitative, and time), but they are much more flexible than ggplot2 scales,
+and offer equivalent functionality.</p></li>
+<li><p>ggplot2 has a two-level hierarchy - you have data and aes specifications in
+the plot and in each layer. ggvis provides an unlimited hierarchy - you can
+have as many levels as you need (and the data will only be computed once)</p></li>
+<li><p>ggvis makes fewer assumptions about the type of data - data does not have
+to be a data frame until it has been processed by a transform.</p></li>
+</ul>
+
+</body>
+
+</html>

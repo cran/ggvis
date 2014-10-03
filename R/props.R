@@ -126,21 +126,14 @@
 props <- function(..., .props = NULL, inherit = TRUE, env = parent.frame()) {
   check_empty_args()
 
-  all <- args_to_props(c(dots(...), .props), env)
+  args <- pluck(lazyeval::lazy_dots(...), "expr")
+  all <- args_to_props(c(args, .props), env)
 
   structure(
     all,
     inherit = inherit,
     class = "ggvis_props"
   )
-}
-
-#' @export
-#' @rdname props
-#' @param prop,value Name of property and the unscaled value that should
-#'   be mapped to it.
-`:=` <- function(prop, value) {
-  stop(":= may only be used inside props", call. = FALSE)
 }
 
 uses_colon_equals <- function(x) {

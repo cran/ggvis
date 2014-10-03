@@ -49,7 +49,7 @@ compute_stack.grouped_df <- function(x, stack_var = NULL, group_var = NULL) {
 
   x <- dplyr::ungroup(x)
   x <- compute_stack(x, stack_var, group_var)
-  x <- dplyr::regroup(x, old_groups)
+  x <- dplyr::group_by_(x, .dots = old_groups)
 
   x
 }
@@ -59,21 +59,18 @@ compute_stack.data.frame <- function(x, stack_var = NULL, group_var = NULL) {
   assert_that(is.formula(stack_var), is.formula(group_var))
 
   # Round grouping variable to 8 significant digits
-  gvar <- substitute(round_fp(x), list(x = group_var[[2]]))
-  x <- do_call(dplyr::mutate, quote(x), group__ = gvar)
-  x <- dplyr::regroup(x, list(quote(group__)))
-
-  # FIXME: This is a workaround for dplyr issue #412
-  lag <- dplyr::lag
+  gvar <- lazyeval::interp(~round_fp(x), x = group_var[[2]])
+  x <- dplyr::group_by_(x, group__ = gvar)
 
   # FIXME: mutate evaluates in this function's environment, which isn't right.
-  # This is like mutate(x, stack_upr_ = cumsum(stack_var),
-  #                     stack_lwr_ = lag(stack_upr_))
+  # This is like mutate(x, stack_upr_ = cumsum(stack_var[[2]]),
+  #                     stack_lwr_ = lag(stack_upr_, default = 0))
   # but with value of stack_var in the right place.
-  x <- do_call(dplyr::mutate, quote(x),
-    stack_upr_ = call("cumsum", stack_var[[2]]),
-    stack_lwr_ = quote(lag(stack_upr_, default = 0))
+  args <- list(
+    stack_upr_ = bquote(cumsum(.(stack_var[[2]]))),
+    stack_lwr_ = bquote(lag(stack_upr_, default = 0))
   )
+  x <- dplyr::mutate_(x, .dots = lazyeval::as.lazy_dots(args, asNamespace("ggvis")))
 
   dplyr::ungroup(x)
 }

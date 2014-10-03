@@ -38,6 +38,12 @@ compute_density.data.frame <- function(x, x_var, w_var = NULL,
 
   # Extract variables from data frame
   x_val <- eval_vector(x, x_var)
+
+  # Special case zero-row input
+  if (length(x_val) == 0) {
+    return(data.frame(pred_ = numeric(0), resp_ = numeric(0)))
+  }
+
   if (is.null(w_var)) {
     w_val <- NULL
   } else {
@@ -74,7 +80,7 @@ compute_density.ggvis <- function(x, x_var, w_var = NULL,
     trim = trim, n = n, na.rm = na.rm, ...)
 
   register_computation(x, args, "density", function(data, args) {
-    output <- do_call(compute_density, quote(data), .args = values(args))
+    output <- do_call(compute_density, quote(data), .args = args)
     preserve_constants(data, output)
   })
 }

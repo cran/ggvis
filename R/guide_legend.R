@@ -144,7 +144,8 @@ fortify_legend <- function(legend, scales_props) {
 
   legend <- structure(compact(list(
       orient = legend$orient, title = legend$title, format = legend$format,
-      values = legend$values, properties = legend$properties
+      values = legend$values, properties = legend$properties,
+      hide = legend$hide
   )), class = c("fortified_legend", "ggvis_legend"))
 
   legend[scales_props] <- names(scales_props)
@@ -181,7 +182,8 @@ apply_legends_defaults <- function(vis) {
     present <- unlist(legend[legs])
     present_scales <- scales[present]
 
-    if (is.null(legend$title)) {
+    # Use [[-indexing to avoid partial name matching of "titleOffset". (#269)
+    if (is.null(legend[["title"]])) {
       legend$title <- present_scales[[1]]$label
     }
 

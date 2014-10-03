@@ -6,19 +6,13 @@ $(function(){ //DOM Ready
 
   var _ = window.lodash;
 
+  // This custom message binding is needed for shiny to keep track of the
+  // hidden state of the ggvis output. It isn't actually used for receiving
+  // regular output values from the server.
   var ggvisOutputBinding = new Shiny.OutputBinding();
   $.extend(ggvisOutputBinding, {
     find: function(scope) {
-      return $(scope).find('.shiny-ggvis-output');
-    },
-    onValueError: function(el, err) {
-      Shiny.unbindAll(el);
-      this.renderError(el, err);
-    },
-    renderValue: function(el, data) {
-      vg.parse.spec(data.spec, function(chart) {
-        chart({el: el}).update({duration: 250});
-      });
+      return $(scope).find('.ggvis-output');
     }
   });
   Shiny.outputBindings.register(ggvisOutputBinding, 'shiny.ggvisOutput');
@@ -124,7 +118,7 @@ $(function(){ //DOM Ready
           }
         }
       } else {
-        console.log("Received unknown ggvis_command.")
+        console.log("Received unknown ggvis_command.");
       }
     }
   });

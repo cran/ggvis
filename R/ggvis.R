@@ -199,7 +199,28 @@ register_computation <- function(vis, args, name, transform = NULL) {
   id <- paste0(data_id(parent_data), "/", name, length(vis$data))
 
   if (shiny::is.reactive(parent_data) || any_apply(args, shiny::is.reactive)) {
-    new_data <- reactive(transform(parent_data(), values(args)))
+    empty <- NULL
+
+    # First time computation is executed, it must succeed. That's used to
+    # determine the specification of the data, and if an error occurs in
+    # subequent run, that specification is sent and the error is printed to
+    # the console
+    new_data <- reactive({
+      if (is.null(empty)) {
+        out <- transform(parent_data(), values(args))
+        empty <<- out[0, , drop = FALSE]
+        out
+      } else {
+        tryCatch(
+          transform(parent_data(), values(args)),
+          error = function(e) {
+            message("Error: ", e$message)
+            data.frame
+          }
+        )
+      }
+    })
+
   } else {
     cache <- transform(parent_data(), args)
     new_data <- function() cache
@@ -211,6 +232,7 @@ register_computation <- function(vis, args, name, transform = NULL) {
 
   vis
 }
+
 
 # Register a list of reactives in the ggvis object's reactives list
 # @param vis A ggvis object.
@@ -264,7 +286,7 @@ register_scales_from_props <- function(vis, props) {
   add_scale_from_prop <- function(vis, prop) {
     # Automatically add label, unless it's blank or has a trailing '_'
     label <- prop_label(prop)
-    if (label == "" || grepl("_$", prop_label(prop))) {
+    if (label == "" || grepl("_$", label)) {
       label <- NULL
     }
 
@@ -348,7 +370,8 @@ show_spec <- function(vis, pieces = NULL) {
     out <- out[pieces]
   }
 
-  json <- RJSONIO::toJSON(out, pretty = TRUE)
+  json <- jsonlite::toJSON(out, pretty = TRUE, auto_unbox = TRUE, force = TRUE,
+                           null = "null")
   cat(gsub("\t", " ", json), "\n", sep = "")
 
   invisible(vis)
@@ -366,14 +389,15 @@ show_spec <- function(vis, pieces = NULL) {
 save_spec <- function(x, path, ...) {
   assert_that(is.ggvis(x), is.string(path))
 
-  json <- RJSONIO::toJSON(as.vega(x, ...), pretty = TRUE)
+  json <- jsonlite::toJSON(as.vega(x, ...), pretty = TRUE, auto_unbox = TRUE,
+                           force = TRUE, null = "null")
   writeLines(json, path)
 }
 
 #' @rdname save_spec
 view_spec <- function(path, ...) {
   contents <- paste0(readLines(path), collapse = "\n")
-  spec <- RJSONIO::fromJSON(contents)
+  spec <- jsonlite::fromJSON(contents)
   view_static(spec)
 }
 
