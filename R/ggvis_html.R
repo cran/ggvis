@@ -30,13 +30,13 @@ ggvis_dependencies <- function() {
     ),
     htmltools::htmlDependency(
       name = "d3",
-      version = "3.4.10",
+      version = "3.5.2",
       src = ggvis_path("lib/d3"),
       script = adjust_min("d3.min.js")
     ),
     htmltools::htmlDependency(
       name = "vega",
-      version = "1.4.2",
+      version = "1.4.3",
       src = ggvis_path("lib/vega"),
       script = adjust_min("vega.min.js")
     ),
