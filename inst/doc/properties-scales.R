@@ -1,4 +1,4 @@
-## ----, echo = FALSE, message = FALSE-------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 library(knitr)
 library(ggvis)
 opts_chunk$set(comment = "#>", error = FALSE, tidy = FALSE)
@@ -7,16 +7,16 @@ opts_chunk$set(fig.width = 3.5, fig.height = 2.5, dpi = 100)
 ## ----eval = FALSE--------------------------------------------------------
 #  geom_point(aes(x = wt, y = mpg), colour = "red", size = 5)
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  layer_paths(x = ~wt, y = ~mpg, stroke := "red", strokeWidth := 5)
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  mtcars %>% ggvis(x = ~wt, y = ~mpg) %>%
 #    layer_points() %>%
 #    layer_model_predictions(model = "lm", stroke = "lm") %>%
 #    layer_smooths(stroke = "loess")
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  mtcars %>% ggvis() %>% layer_lines(strke = ~cyl)
 #  #> Error: Unknown properties: strke. Did you mean: stroke?
 #  mtcars %>% ggvis(strke = ~cyl) %>% layer_lines()
@@ -50,12 +50,12 @@ mtcars %>% ggvis(~disp, ~wt) %>%
   scale_numeric("x", domain = c(50, 500), nice = FALSE) %>%
   scale_numeric("y", domain = c(0, 6), nice = FALSE)
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  scale_numeric(vis, "x")
 #  scale_numeric(vis, "y")
 #  scale_nominal(vis, "shape")
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  scale_numeric(vis, "x", domain = c(10, 100))
 #  scale_numeric(vis, "x", trans = "log")
 

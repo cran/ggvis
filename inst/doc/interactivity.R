@@ -1,4 +1,4 @@
-## ----, echo = FALSE, message = FALSE-------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 library(knitr)
 library(ggvis)
 opts_chunk$set(comment = "#>", error = FALSE, tidy = FALSE)
@@ -10,7 +10,7 @@ mtcars %>%
   layer_smooths(span = input_slider(0.5, 1, value = 1)) %>%
   layer_points(size := input_slider(100, 1000, value = 100))
 
-## ----, eval=FALSE--------------------------------------------------------
+## ---- eval=FALSE---------------------------------------------------------
 #  mtcars %>% ggvis(x = ~wt) %>%
 #      layer_densities(
 #        adjust = input_slider(.1, 2, value = 1, step = .1, label = "Bandwidth adjustment"),
@@ -25,7 +25,7 @@ mtcars %>%
 #          label = "Kernel")
 #      )
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  input_slider(-5, 5, label = "lambda", map = function(x) 10 ^ x)
 
 ## ------------------------------------------------------------------------
@@ -50,7 +50,7 @@ mtcars %>% ggvis(~wt, ~mpg) %>%
   layer_points(size := input_slider(100, 1000, label = "black")) %>%
   layer_points(fill := "red", size := input_slider(100, 1000, label = "red"))
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  # A reactive expression wrapper for input$size
 #  input_size <- reactive(input$size)
 #  
@@ -59,7 +59,7 @@ mtcars %>% ggvis(~wt, ~mpg) %>%
 #    layer_points() %>%
 #    bind_shiny("ggvis", "ggvis_ui")
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  shinyUI(pageWithSidebar(
 #    sidebarPanel(
 #      sliderInput("size", "Area", 10, 1000)

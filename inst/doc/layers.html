@@ -292,138 +292,129 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id801377762_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;symbol&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;size&quot;: {
-                        &quot;value&quot;: 50
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.wt&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.mpg&quot;
-                    },
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;red&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;wt&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;mpg&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;symbol&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;size&quot;: {
+            &quot;value&quot;: 50
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.wt&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.mpg&quot;
+          },
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;red&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;wt&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;mpg&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id801377762&quot;).parseSpec(plot_id801377762_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -454,138 +445,129 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id283760508_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;symbol&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;size&quot;: {
-                        &quot;value&quot;: 50
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.wt&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.mpg&quot;
-                    },
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;red&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;wt&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;mpg&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;symbol&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;size&quot;: {
+            &quot;value&quot;: 50
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.wt&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.mpg&quot;
+          },
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;red&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;wt&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;mpg&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id283760508&quot;).parseSpec(plot_id283760508_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -633,173 +615,159 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id742057550_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;Freq&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;Freq\&quot;,\&quot;Hair\&quot;,\&quot;Eye\&quot;\n68,\&quot;Black\&quot;,\&quot;Brown\&quot;\n119,\&quot;Brown\&quot;,\&quot;Brown\&quot;\n26,\&quot;Red\&quot;,\&quot;Brown\&quot;\n7,\&quot;Blond\&quot;,\&quot;Brown\&quot;\n20,\&quot;Black\&quot;,\&quot;Blue\&quot;\n84,\&quot;Brown\&quot;,\&quot;Blue\&quot;\n17,\&quot;Red\&quot;,\&quot;Blue\&quot;\n94,\&quot;Blond\&quot;,\&quot;Blue\&quot;\n15,\&quot;Black\&quot;,\&quot;Hazel\&quot;\n54,\&quot;Brown\&quot;,\&quot;Hazel\&quot;\n14,\&quot;Red\&quot;,\&quot;Hazel\&quot;\n10,\&quot;Blond\&quot;,\&quot;Hazel\&quot;\n5,\&quot;Black\&quot;,\&quot;Green\&quot;\n29,\&quot;Brown\&quot;,\&quot;Green\&quot;\n14,\&quot;Red\&quot;,\&quot;Green\&quot;\n16,\&quot;Blond\&quot;,\&quot;Green\&quot;&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/fill&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n5\n119&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {</p>
-
-<pre><code>            }
-        },
-        &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;Black\&quot;\n\&quot;Brown\&quot;\n\&quot;Red\&quot;\n\&quot;Blond\&quot;&quot;
-    },
+  &quot;data&quot;: [
     {
-        &quot;name&quot;: &quot;scale/y&quot;,
-        &quot;format&quot;: {
-            &quot;type&quot;: &quot;csv&quot;,
-            &quot;parse&quot;: {
-
-            }
-        },
-        &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;Brown\&quot;\n\&quot;Blue\&quot;\n\&quot;Hazel\&quot;\n\&quot;Green\&quot;&quot;
-    }
-],
-&quot;scales&quot;: [
-    {
-        &quot;name&quot;: &quot;fill&quot;,
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/fill&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;zero&quot;: false,
-        &quot;nice&quot;: false,
-        &quot;clamp&quot;: false,
-        &quot;range&quot;: [
-            &quot;#132B43&quot;,
-            &quot;#56B1F7&quot;
-        ]
-    },
-    {
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/x&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;name&quot;: &quot;x&quot;,
-        &quot;type&quot;: &quot;ordinal&quot;,
-        &quot;points&quot;: false,
-        &quot;padding&quot;: 0,
-        &quot;sort&quot;: false,
-        &quot;range&quot;: &quot;width&quot;
-    },
-    {
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/y&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;name&quot;: &quot;y&quot;,
-        &quot;type&quot;: &quot;ordinal&quot;,
-        &quot;points&quot;: false,
-        &quot;padding&quot;: 0,
-        &quot;sort&quot;: false,
-        &quot;range&quot;: &quot;height&quot;
-    }
-],
-&quot;marks&quot;: [
-    {
-        &quot;type&quot;: &quot;rect&quot;,
-        &quot;properties&quot;: {
-            &quot;update&quot;: {
-                &quot;stroke&quot;: {
-                    &quot;value&quot;: &quot;#000000&quot;
-                },
-                &quot;fill&quot;: {
-                    &quot;scale&quot;: &quot;fill&quot;,
-                    &quot;field&quot;: &quot;data.Freq&quot;
-                },
-                &quot;x&quot;: {
-                    &quot;scale&quot;: &quot;x&quot;,
-                    &quot;field&quot;: &quot;data.Hair&quot;
-                },
-                &quot;y&quot;: {
-                    &quot;scale&quot;: &quot;y&quot;,
-                    &quot;field&quot;: &quot;data.Eye&quot;
-                },
-                &quot;width&quot;: {
-                    &quot;scale&quot;: &quot;x&quot;,
-                    &quot;band&quot;: true
-                },
-                &quot;height&quot;: {
-                    &quot;scale&quot;: &quot;y&quot;,
-                    &quot;band&quot;: true
-                }
-            },
-            &quot;ggvis&quot;: {
-                &quot;data&quot;: {
-                    &quot;value&quot;: &quot;.0&quot;
-                }
-            }
-        },
-        &quot;from&quot;: {
-            &quot;data&quot;: &quot;.0&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;Freq&quot;: &quot;number&quot;
         }
-    }
-],
-&quot;width&quot;: 350,
-&quot;height&quot;: 250,
-&quot;legends&quot;: [
-    {
-        &quot;orient&quot;: &quot;right&quot;,
-        &quot;fill&quot;: &quot;fill&quot;,
-        &quot;title&quot;: &quot;Freq&quot;
-    }
-],
-&quot;axes&quot;: [
-    {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;Hair&quot;
+      },
+      &quot;values&quot;: &quot;\&quot;Freq\&quot;,\&quot;Hair\&quot;,\&quot;Eye\&quot;\n68,\&quot;Black\&quot;,\&quot;Brown\&quot;\n119,\&quot;Brown\&quot;,\&quot;Brown\&quot;\n26,\&quot;Red\&quot;,\&quot;Brown\&quot;\n7,\&quot;Blond\&quot;,\&quot;Brown\&quot;\n20,\&quot;Black\&quot;,\&quot;Blue\&quot;\n84,\&quot;Brown\&quot;,\&quot;Blue\&quot;\n17,\&quot;Red\&quot;,\&quot;Blue\&quot;\n94,\&quot;Blond\&quot;,\&quot;Blue\&quot;\n15,\&quot;Black\&quot;,\&quot;Hazel\&quot;\n54,\&quot;Brown\&quot;,\&quot;Hazel\&quot;\n14,\&quot;Red\&quot;,\&quot;Hazel\&quot;\n10,\&quot;Blond\&quot;,\&quot;Hazel\&quot;\n5,\&quot;Black\&quot;,\&quot;Green\&quot;\n29,\&quot;Brown\&quot;,\&quot;Green\&quot;\n14,\&quot;Red\&quot;,\&quot;Green\&quot;\n16,\&quot;Blond\&quot;,\&quot;Green\&quot;&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;Eye&quot;
+      &quot;name&quot;: &quot;scale/fill&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n5\n119&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {}
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;Black\&quot;\n\&quot;Brown\&quot;\n\&quot;Red\&quot;\n\&quot;Blond\&quot;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {}
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;Brown\&quot;\n\&quot;Blue\&quot;\n\&quot;Hazel\&quot;\n\&quot;Green\&quot;&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;fill&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/fill&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: [&quot;#132B43&quot;, &quot;#56B1F7&quot;]
+    },
+    {
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;type&quot;: &quot;ordinal&quot;,
+      &quot;points&quot;: false,
+      &quot;padding&quot;: 0,
+      &quot;sort&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;type&quot;: &quot;ordinal&quot;,
+      &quot;points&quot;: false,
+      &quot;padding&quot;: 0,
+      &quot;sort&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;rect&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;fill&quot;: {
+            &quot;scale&quot;: &quot;fill&quot;,
+            &quot;field&quot;: &quot;data.Freq&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.Hair&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.Eye&quot;
+          },
+          &quot;width&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;band&quot;: true
+          },
+          &quot;height&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;band&quot;: true
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [
+    {
+      &quot;orient&quot;: &quot;right&quot;,
+      &quot;fill&quot;: &quot;fill&quot;,
+      &quot;title&quot;: &quot;Freq&quot;
+    }
+  ],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;Hair&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;Eye&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id742057550&quot;).parseSpec(plot_id742057550_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -836,132 +804,123 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id158694500_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,2\n1,1\n2,1\n2,2&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;line&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;red&quot;
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,2\n1,1\n2,1\n2,2&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;line&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;red&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id158694500&quot;).parseSpec(plot_id158694500_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -993,135 +952,126 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id418786118_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,2\n1,1\n2,1\n2,2&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;line&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;red&quot;
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,2\n1,1\n2,1\n2,2&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.95\n2.05&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;line&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;red&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id418786118&quot;).parseSpec(plot_id418786118_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -1171,135 +1121,126 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id842679478_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;area&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#333333&quot;
-                    },
-                    &quot;y2&quot;: {
-                        &quot;value&quot;: 0
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;area&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#333333&quot;
+          },
+          &quot;y2&quot;: {
+            &quot;value&quot;: 0
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id842679478&quot;).parseSpec(plot_id842679478_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -1331,135 +1272,126 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id346436420_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;area&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#333333&quot;
-                    },
-                    &quot;height&quot;: {
-                        &quot;value&quot;: 20
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;area&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#333333&quot;
+          },
+          &quot;height&quot;: {
+            &quot;value&quot;: 20
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id346436420&quot;).parseSpec(plot_id346436420_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -1498,136 +1430,127 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id613040455_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;area&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#333333&quot;
-                    },
-                    &quot;height&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;value&quot;: 80
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;\n1,1\n2,4\n3,9\n4,16\n5,25\n6,36\n7,49\n8,64\n9,81\n10,100&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;area&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#333333&quot;
+          },
+          &quot;height&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;value&quot;: 80
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id613040455&quot;).parseSpec(plot_id613040455_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -1665,166 +1588,157 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id272366228_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;x&quot;: &quot;number&quot;,
-                    &quot;y&quot;: &quot;number&quot;,
-                    &quot;reactive_636636509&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;,\&quot;reactive_636636509\&quot;\n1,1,50\n2,4,50\n3,9,50\n4,16,50\n5,25,50\n6,36,50\n7,49,50\n8,64,50\n9,81,50\n10,100,50&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;area&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#333333&quot;
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    },
-                    &quot;height&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.reactive_636636509&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;line&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y&quot;
-                    },
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;red&quot;
-                    },
-                    &quot;strokeWidth&quot;: {
-                        &quot;value&quot;: 10
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;x&quot;: &quot;number&quot;,
+          &quot;y&quot;: &quot;number&quot;,
+          &quot;reactive_636636509&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;x\&quot;,\&quot;y\&quot;,\&quot;reactive_636636509\&quot;\n1,1,50\n2,4,50\n3,9,50\n4,16,50\n5,25,50\n6,36,50\n7,49,50\n8,64,50\n9,81,50\n10,100,50&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n-3.95\n104.95&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;area&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#333333&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          },
+          &quot;height&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.reactive_636636509&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;line&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y&quot;
+          },
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;red&quot;
+          },
+          &quot;strokeWidth&quot;: {
+            &quot;value&quot;: 10
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id272366228&quot;).parseSpec(plot_id272366228_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -1858,137 +1772,128 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id952987543_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;y - 2&quot;: &quot;number&quot;,
-                    &quot;y + 2&quot;: &quot;number&quot;,
-                    &quot;x&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;y - 2\&quot;,\&quot;y + 2\&quot;,\&quot;x\&quot;\n-1,3,1\n2,6,2\n7,11,3\n14,18,4\n23,27,5\n34,38,6\n47,51,7\n62,66,8\n79,83,9\n98,102,10&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n-6.15\n107.15&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;area&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#333333&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y - 2&quot;
-                    },
-                    &quot;y2&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.y + 2&quot;
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.x&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;x&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;y - 2&quot;: &quot;number&quot;,
+          &quot;y + 2&quot;: &quot;number&quot;,
+          &quot;x&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;y - 2\&quot;,\&quot;y + 2\&quot;,\&quot;x\&quot;\n-1,3,1\n2,6,2\n7,11,3\n14,18,4\n23,27,5\n34,38,6\n47,51,7\n62,66,8\n79,83,9\n98,102,10&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;y + 2&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n0.55\n10.45&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n-6.15\n107.15&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;area&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#333333&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y - 2&quot;
+          },
+          &quot;y2&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.y + 2&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.x&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;x&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;y + 2&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id952987543&quot;).parseSpec(plot_id952987543_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -2030,190 +1935,181 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id588232367_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
-        },
-        {
-            &quot;name&quot;: &quot;.0/group_by1_flat&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;cyl&quot;: &quot;number&quot;,
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;cyl\&quot;,\&quot;wt\&quot;,\&quot;mpg\&quot;\n4,2.32,22.8\n4,3.19,24.4\n4,3.15,22.8\n4,2.2,32.4\n4,1.615,30.4\n4,1.835,33.9\n4,2.465,21.5\n4,1.935,27.3\n4,2.14,26\n4,1.513,30.4\n4,2.78,21.4\n6,2.62,21\n6,2.875,21\n6,3.215,21.4\n6,3.46,18.1\n6,3.44,19.2\n6,3.44,17.8\n6,2.77,19.7\n8,3.44,18.7\n8,3.57,14.3\n8,4.07,16.4\n8,3.73,17.3\n8,3.78,15.2\n8,5.25,10.4\n8,5.424,10.4\n8,5.345,14.7\n8,3.52,15.5\n8,3.435,15.2\n8,3.84,13.3\n8,3.845,19.2\n8,3.17,15.8\n8,3.57,15&quot;
-        },
-        {
-            &quot;name&quot;: &quot;.0/group_by1&quot;,
-            &quot;source&quot;: &quot;.0/group_by1_flat&quot;,
-            &quot;transform&quot;: [
-                {
-                    &quot;type&quot;: &quot;treefacet&quot;,
-                    &quot;keys&quot;: [
-                        &quot;data.cyl&quot;
-                    ]
-                }
-            ]
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;symbol&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;size&quot;: {
-                        &quot;value&quot;: 50
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.wt&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.mpg&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;group&quot;,
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0/group_by1&quot;
-            },
-            &quot;marks&quot;: [
-                {
-                    &quot;type&quot;: &quot;line&quot;,
-                    &quot;properties&quot;: {
-                        &quot;update&quot;: {
-                            &quot;stroke&quot;: {
-                                &quot;value&quot;: &quot;#000000&quot;
-                            },
-                            &quot;x&quot;: {
-                                &quot;scale&quot;: &quot;x&quot;,
-                                &quot;field&quot;: &quot;data.wt&quot;
-                            },
-                            &quot;y&quot;: {
-                                &quot;scale&quot;: &quot;y&quot;,
-                                &quot;field&quot;: &quot;data.mpg&quot;
-                            }
-                        },
-                        &quot;ggvis&quot;: {
-                            &quot;data&quot;: {
-                                &quot;value&quot;: &quot;.0/group_by1&quot;
-                            }
-                        }
-                    }
-                }
-            ]
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;wt&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;mpg&quot;
+      &quot;name&quot;: &quot;.0/group_by1_flat&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;cyl&quot;: &quot;number&quot;,
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;cyl\&quot;,\&quot;wt\&quot;,\&quot;mpg\&quot;\n4,2.32,22.8\n4,3.19,24.4\n4,3.15,22.8\n4,2.2,32.4\n4,1.615,30.4\n4,1.835,33.9\n4,2.465,21.5\n4,1.935,27.3\n4,2.14,26\n4,1.513,30.4\n4,2.78,21.4\n6,2.62,21\n6,2.875,21\n6,3.215,21.4\n6,3.46,18.1\n6,3.44,19.2\n6,3.44,17.8\n6,2.77,19.7\n8,3.44,18.7\n8,3.57,14.3\n8,4.07,16.4\n8,3.73,17.3\n8,3.78,15.2\n8,5.25,10.4\n8,5.424,10.4\n8,5.345,14.7\n8,3.52,15.5\n8,3.435,15.2\n8,3.84,13.3\n8,3.845,19.2\n8,3.17,15.8\n8,3.57,15&quot;
+    },
+    {
+      &quot;name&quot;: &quot;.0/group_by1&quot;,
+      &quot;source&quot;: &quot;.0/group_by1_flat&quot;,
+      &quot;transform&quot;: [
+        {
+          &quot;type&quot;: &quot;treefacet&quot;,
+          &quot;keys&quot;: [
+            &quot;data.cyl&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;symbol&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;size&quot;: {
+            &quot;value&quot;: 50
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.wt&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.mpg&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0/group_by1&quot;
+      },
+      &quot;marks&quot;: [
+        {
+          &quot;type&quot;: &quot;line&quot;,
+          &quot;properties&quot;: {
+            &quot;update&quot;: {
+              &quot;stroke&quot;: {
+                &quot;value&quot;: &quot;#000000&quot;
+              },
+              &quot;x&quot;: {
+                &quot;scale&quot;: &quot;x&quot;,
+                &quot;field&quot;: &quot;data.wt&quot;
+              },
+              &quot;y&quot;: {
+                &quot;scale&quot;: &quot;y&quot;,
+                &quot;field&quot;: &quot;data.mpg&quot;
+              }
+            },
+            &quot;ggvis&quot;: {
+              &quot;data&quot;: {
+                &quot;value&quot;: &quot;.0/group_by1&quot;
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;wt&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;mpg&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id588232367&quot;).parseSpec(plot_id588232367_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -2247,161 +2143,152 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id590143053_spec = {
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;.0&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/x&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
-        },
-        {
-            &quot;name&quot;: &quot;scale/y&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;domain&quot;: &quot;number&quot;
-                }
-            },
-            &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
-        }
-    ],
-    &quot;scales&quot;: [
-        {
-            &quot;name&quot;: &quot;x&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/x&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;width&quot;
-        },
-        {
-            &quot;name&quot;: &quot;y&quot;,
-            &quot;domain&quot;: {
-                &quot;data&quot;: &quot;scale/y&quot;,
-                &quot;field&quot;: &quot;data.domain&quot;
-            },
-            &quot;zero&quot;: false,
-            &quot;nice&quot;: false,
-            &quot;clamp&quot;: false,
-            &quot;range&quot;: &quot;height&quot;
-        }
-    ],
-    &quot;marks&quot;: [
-        {
-            &quot;type&quot;: &quot;symbol&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;fill&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;size&quot;: {
-                        &quot;value&quot;: 50
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.wt&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.mpg&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;line&quot;,
-            &quot;properties&quot;: {
-                &quot;update&quot;: {
-                    &quot;stroke&quot;: {
-                        &quot;value&quot;: &quot;#000000&quot;
-                    },
-                    &quot;x&quot;: {
-                        &quot;scale&quot;: &quot;x&quot;,
-                        &quot;field&quot;: &quot;data.wt&quot;
-                    },
-                    &quot;y&quot;: {
-                        &quot;scale&quot;: &quot;y&quot;,
-                        &quot;field&quot;: &quot;data.mpg&quot;
-                    }
-                },
-                &quot;ggvis&quot;: {
-                    &quot;data&quot;: {
-                        &quot;value&quot;: &quot;.0&quot;
-                    }
-                }
-            },
-            &quot;from&quot;: {
-                &quot;data&quot;: &quot;.0&quot;
-            }
-        }
-    ],
-    &quot;width&quot;: 350,
-    &quot;height&quot;: 250,
-    &quot;legends&quot;: [</p>
-
-<pre><code>],
-&quot;axes&quot;: [
+  &quot;data&quot;: [
     {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;wt&quot;
+      &quot;name&quot;: &quot;.0&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;wt\&quot;,\&quot;mpg\&quot;\n2.62,21\n2.875,21\n2.32,22.8\n3.215,21.4\n3.44,18.7\n3.46,18.1\n3.57,14.3\n3.19,24.4\n3.15,22.8\n3.44,19.2\n3.44,17.8\n4.07,16.4\n3.73,17.3\n3.78,15.2\n5.25,10.4\n5.424,10.4\n5.345,14.7\n2.2,32.4\n1.615,30.4\n1.835,33.9\n2.465,21.5\n3.52,15.5\n3.435,15.2\n3.84,13.3\n3.845,19.2\n1.935,27.3\n2.14,26\n1.513,30.4\n3.17,15.8\n2.77,19.7\n3.57,15\n2.78,21.4&quot;
     },
     {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;mpg&quot;
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
     }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;symbol&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;size&quot;: {
+            &quot;value&quot;: 50
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.wt&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.mpg&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;line&quot;,
+      &quot;properties&quot;: {
+        &quot;update&quot;: {
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;#000000&quot;
+          },
+          &quot;x&quot;: {
+            &quot;scale&quot;: &quot;x&quot;,
+            &quot;field&quot;: &quot;data.wt&quot;
+          },
+          &quot;y&quot;: {
+            &quot;scale&quot;: &quot;y&quot;,
+            &quot;field&quot;: &quot;data.mpg&quot;
+          }
+        },
+        &quot;ggvis&quot;: {
+          &quot;data&quot;: {
+            &quot;value&quot;: &quot;.0&quot;
+          }
+        }
+      },
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0&quot;
+      }
+    }
+  ],
+  &quot;legends&quot;: [],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;wt&quot;
+    },
+    {
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;mpg&quot;
+    }
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id590143053&quot;).parseSpec(plot_id590143053_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 
@@ -2437,175 +2324,166 @@ Renderer:
 <p></div>
 <script type="text/javascript">
 var plot_id350737438_spec = {
-    &quot;data&quot;: [
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;.0/group_by1/arrange2_flat&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;wt&quot;: &quot;number&quot;,
+          &quot;mpg&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;cyl2\&quot;,\&quot;wt\&quot;,\&quot;mpg\&quot;\n\&quot;4\&quot;,1.513,30.4\n\&quot;4\&quot;,1.615,30.4\n\&quot;4\&quot;,1.835,33.9\n\&quot;4\&quot;,1.935,27.3\n\&quot;4\&quot;,2.14,26\n\&quot;4\&quot;,2.2,32.4\n\&quot;4\&quot;,2.32,22.8\n\&quot;4\&quot;,2.465,21.5\n\&quot;4\&quot;,2.78,21.4\n\&quot;4\&quot;,3.15,22.8\n\&quot;4\&quot;,3.19,24.4\n\&quot;6\&quot;,2.62,21\n\&quot;6\&quot;,2.77,19.7\n\&quot;6\&quot;,2.875,21\n\&quot;6\&quot;,3.215,21.4\n\&quot;6\&quot;,3.44,19.2\n\&quot;6\&quot;,3.44,17.8\n\&quot;6\&quot;,3.46,18.1\n\&quot;8\&quot;,3.17,15.8\n\&quot;8\&quot;,3.435,15.2\n\&quot;8\&quot;,3.44,18.7\n\&quot;8\&quot;,3.52,15.5\n\&quot;8\&quot;,3.57,14.3\n\&quot;8\&quot;,3.57,15\n\&quot;8\&quot;,3.73,17.3\n\&quot;8\&quot;,3.78,15.2\n\&quot;8\&quot;,3.84,13.3\n\&quot;8\&quot;,3.845,19.2\n\&quot;8\&quot;,4.07,16.4\n\&quot;8\&quot;,5.25,10.4\n\&quot;8\&quot;,5.345,14.7\n\&quot;8\&quot;,5.424,10.4&quot;
+    },
+    {
+      &quot;name&quot;: &quot;.0/group_by1/arrange2&quot;,
+      &quot;source&quot;: &quot;.0/group_by1/arrange2_flat&quot;,
+      &quot;transform&quot;: [
         {
-            &quot;name&quot;: &quot;.0/group_by1/arrange2_flat&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {
-                    &quot;wt&quot;: &quot;number&quot;,
-                    &quot;mpg&quot;: &quot;number&quot;
-                }
+          &quot;type&quot;: &quot;treefacet&quot;,
+          &quot;keys&quot;: [
+            &quot;data.cyl2&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;scale/stroke&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {}
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;4\&quot;\n\&quot;6\&quot;\n\&quot;8\&quot;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/x&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scale/y&quot;,
+      &quot;format&quot;: {
+        &quot;type&quot;: &quot;csv&quot;,
+        &quot;parse&quot;: {
+          &quot;domain&quot;: &quot;number&quot;
+        }
+      },
+      &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
+    }
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;stroke&quot;,
+      &quot;type&quot;: &quot;ordinal&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/stroke&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;points&quot;: true,
+      &quot;sort&quot;: false,
+      &quot;range&quot;: &quot;category10&quot;
+    },
+    {
+      &quot;name&quot;: &quot;x&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/x&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;width&quot;
+    },
+    {
+      &quot;name&quot;: &quot;y&quot;,
+      &quot;domain&quot;: {
+        &quot;data&quot;: &quot;scale/y&quot;,
+        &quot;field&quot;: &quot;data.domain&quot;
+      },
+      &quot;zero&quot;: false,
+      &quot;nice&quot;: false,
+      &quot;clamp&quot;: false,
+      &quot;range&quot;: &quot;height&quot;
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;.0/group_by1/arrange2&quot;
+      },
+      &quot;marks&quot;: [
+        {
+          &quot;type&quot;: &quot;line&quot;,
+          &quot;properties&quot;: {
+            &quot;update&quot;: {
+              &quot;stroke&quot;: {
+                &quot;scale&quot;: &quot;stroke&quot;,
+                &quot;field&quot;: &quot;data.cyl2&quot;
+              },
+              &quot;x&quot;: {
+                &quot;scale&quot;: &quot;x&quot;,
+                &quot;field&quot;: &quot;data.wt&quot;
+              },
+              &quot;y&quot;: {
+                &quot;scale&quot;: &quot;y&quot;,
+                &quot;field&quot;: &quot;data.mpg&quot;
+              }
             },
-            &quot;values&quot;: &quot;\&quot;cyl2\&quot;,\&quot;wt\&quot;,\&quot;mpg\&quot;\n\&quot;4\&quot;,1.513,30.4\n\&quot;4\&quot;,1.615,30.4\n\&quot;4\&quot;,1.835,33.9\n\&quot;4\&quot;,1.935,27.3\n\&quot;4\&quot;,2.14,26\n\&quot;4\&quot;,2.2,32.4\n\&quot;4\&quot;,2.32,22.8\n\&quot;4\&quot;,2.465,21.5\n\&quot;4\&quot;,2.78,21.4\n\&quot;4\&quot;,3.15,22.8\n\&quot;4\&quot;,3.19,24.4\n\&quot;6\&quot;,2.62,21\n\&quot;6\&quot;,2.77,19.7\n\&quot;6\&quot;,2.875,21\n\&quot;6\&quot;,3.215,21.4\n\&quot;6\&quot;,3.44,19.2\n\&quot;6\&quot;,3.44,17.8\n\&quot;6\&quot;,3.46,18.1\n\&quot;8\&quot;,3.17,15.8\n\&quot;8\&quot;,3.435,15.2\n\&quot;8\&quot;,3.44,18.7\n\&quot;8\&quot;,3.52,15.5\n\&quot;8\&quot;,3.57,14.3\n\&quot;8\&quot;,3.57,15\n\&quot;8\&quot;,3.73,17.3\n\&quot;8\&quot;,3.78,15.2\n\&quot;8\&quot;,3.84,13.3\n\&quot;8\&quot;,3.845,19.2\n\&quot;8\&quot;,4.07,16.4\n\&quot;8\&quot;,5.25,10.4\n\&quot;8\&quot;,5.345,14.7\n\&quot;8\&quot;,5.424,10.4&quot;
-        },
-        {
-            &quot;name&quot;: &quot;.0/group_by1/arrange2&quot;,
-            &quot;source&quot;: &quot;.0/group_by1/arrange2_flat&quot;,
-            &quot;transform&quot;: [
-                {
-                    &quot;type&quot;: &quot;treefacet&quot;,
-                    &quot;keys&quot;: [
-                        &quot;data.cyl2&quot;
-                    ]
-                }
-            ]
-        },
-        {
-            &quot;name&quot;: &quot;scale/stroke&quot;,
-            &quot;format&quot;: {
-                &quot;type&quot;: &quot;csv&quot;,
-                &quot;parse&quot;: {</p>
-
-<pre><code>            }
-        },
-        &quot;values&quot;: &quot;\&quot;domain\&quot;\n\&quot;4\&quot;\n\&quot;6\&quot;\n\&quot;8\&quot;&quot;
-    },
-    {
-        &quot;name&quot;: &quot;scale/x&quot;,
-        &quot;format&quot;: {
-            &quot;type&quot;: &quot;csv&quot;,
-            &quot;parse&quot;: {
-                &quot;domain&quot;: &quot;number&quot;
+            &quot;ggvis&quot;: {
+              &quot;data&quot;: {
+                &quot;value&quot;: &quot;.0/group_by1/arrange2&quot;
+              }
             }
-        },
-        &quot;values&quot;: &quot;\&quot;domain\&quot;\n1.31745\n5.61955&quot;
+          }
+        }
+      ]
+    }
+  ],
+  &quot;legends&quot;: [
+    {
+      &quot;orient&quot;: &quot;right&quot;,
+      &quot;stroke&quot;: &quot;stroke&quot;,
+      &quot;title&quot;: &quot;cyl2&quot;
+    }
+  ],
+  &quot;axes&quot;: [
+    {
+      &quot;type&quot;: &quot;x&quot;,
+      &quot;scale&quot;: &quot;x&quot;,
+      &quot;orient&quot;: &quot;bottom&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;wt&quot;
     },
     {
-        &quot;name&quot;: &quot;scale/y&quot;,
-        &quot;format&quot;: {
-            &quot;type&quot;: &quot;csv&quot;,
-            &quot;parse&quot;: {
-                &quot;domain&quot;: &quot;number&quot;
-            }
-        },
-        &quot;values&quot;: &quot;\&quot;domain\&quot;\n9.225\n35.075&quot;
+      &quot;type&quot;: &quot;y&quot;,
+      &quot;scale&quot;: &quot;y&quot;,
+      &quot;orient&quot;: &quot;left&quot;,
+      &quot;layer&quot;: &quot;back&quot;,
+      &quot;grid&quot;: true,
+      &quot;title&quot;: &quot;mpg&quot;
     }
-],
-&quot;scales&quot;: [
-    {
-        &quot;name&quot;: &quot;stroke&quot;,
-        &quot;type&quot;: &quot;ordinal&quot;,
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/stroke&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;points&quot;: true,
-        &quot;sort&quot;: false,
-        &quot;range&quot;: &quot;category10&quot;
-    },
-    {
-        &quot;name&quot;: &quot;x&quot;,
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/x&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;zero&quot;: false,
-        &quot;nice&quot;: false,
-        &quot;clamp&quot;: false,
-        &quot;range&quot;: &quot;width&quot;
-    },
-    {
-        &quot;name&quot;: &quot;y&quot;,
-        &quot;domain&quot;: {
-            &quot;data&quot;: &quot;scale/y&quot;,
-            &quot;field&quot;: &quot;data.domain&quot;
-        },
-        &quot;zero&quot;: false,
-        &quot;nice&quot;: false,
-        &quot;clamp&quot;: false,
-        &quot;range&quot;: &quot;height&quot;
-    }
-],
-&quot;marks&quot;: [
-    {
-        &quot;type&quot;: &quot;group&quot;,
-        &quot;from&quot;: {
-            &quot;data&quot;: &quot;.0/group_by1/arrange2&quot;
-        },
-        &quot;marks&quot;: [
-            {
-                &quot;type&quot;: &quot;line&quot;,
-                &quot;properties&quot;: {
-                    &quot;update&quot;: {
-                        &quot;stroke&quot;: {
-                            &quot;scale&quot;: &quot;stroke&quot;,
-                            &quot;field&quot;: &quot;data.cyl2&quot;
-                        },
-                        &quot;x&quot;: {
-                            &quot;scale&quot;: &quot;x&quot;,
-                            &quot;field&quot;: &quot;data.wt&quot;
-                        },
-                        &quot;y&quot;: {
-                            &quot;scale&quot;: &quot;y&quot;,
-                            &quot;field&quot;: &quot;data.mpg&quot;
-                        }
-                    },
-                    &quot;ggvis&quot;: {
-                        &quot;data&quot;: {
-                            &quot;value&quot;: &quot;.0/group_by1/arrange2&quot;
-                        }
-                    }
-                }
-            }
-        ]
-    }
-],
-&quot;width&quot;: 350,
-&quot;height&quot;: 250,
-&quot;legends&quot;: [
-    {
-        &quot;orient&quot;: &quot;right&quot;,
-        &quot;stroke&quot;: &quot;stroke&quot;,
-        &quot;title&quot;: &quot;cyl2&quot;
-    }
-],
-&quot;axes&quot;: [
-    {
-        &quot;type&quot;: &quot;x&quot;,
-        &quot;scale&quot;: &quot;x&quot;,
-        &quot;orient&quot;: &quot;bottom&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;wt&quot;
-    },
-    {
-        &quot;type&quot;: &quot;y&quot;,
-        &quot;scale&quot;: &quot;y&quot;,
-        &quot;orient&quot;: &quot;left&quot;,
-        &quot;layer&quot;: &quot;back&quot;,
-        &quot;grid&quot;: true,
-        &quot;title&quot;: &quot;mpg&quot;
-    }
-],
-&quot;padding&quot;: null,
-&quot;ggvis_opts&quot;: {
+  ],
+  &quot;padding&quot;: null,
+  &quot;ggvis_opts&quot;: {
     &quot;keep_aspect&quot;: false,
     &quot;resizable&quot;: true,
-    &quot;padding&quot;: {
-
-    },
+    &quot;padding&quot;: {},
     &quot;duration&quot;: 250,
     &quot;renderer&quot;: &quot;svg&quot;,
     &quot;hover_duration&quot;: 0,
     &quot;width&quot;: 350,
     &quot;height&quot;: 250
-},
-&quot;handlers&quot;: null
-</code></pre>
-
-<p>}
-;
+  },
+  &quot;handlers&quot;: null
+};
 ggvis.getPlot(&quot;plot_id350737438&quot;).parseSpec(plot_id350737438_spec);
 </script>&lt;!&ndash;/html_preserve&ndash;&gt;</p>
 

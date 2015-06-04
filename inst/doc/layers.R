@@ -1,4 +1,4 @@
-## ----, echo = FALSE, message = FALSE-------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 library(knitr)
 library(ggvis)
 opts_chunk$set(comment = "#>", error = FALSE, tidy = FALSE)
@@ -23,7 +23,7 @@ df %>% ggvis(~x, ~y, stroke := "red") %>% layer_paths()
 # Add a fill colour to make it a polygon
 df %>% ggvis(~x, ~y, fill := "red") %>% layer_paths()
 
-## ----, eval = FALSE------------------------------------------------------
+## ---- eval = FALSE-------------------------------------------------------
 #  ggvis() %>%
 #    layer_points(x = ~disp, y = ~wt, data = mtcars) %>%
 #    layer_paths(x := 0, y = ~mean(mtcars$wt, x2 := prop_group())) %>%

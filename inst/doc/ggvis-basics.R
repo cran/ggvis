@@ -1,4 +1,4 @@
-## ----, echo = FALSE, message = FALSE-------------------------------------
+## ---- echo = FALSE, message = FALSE--------------------------------------
 library(knitr)
 library(ggvis)
 opts_chunk$set(comment = "#>", error = FALSE, tidy = FALSE)
@@ -18,7 +18,7 @@ mtcars %>%
   ggvis(x = ~wt, y = ~mpg) %>%
   layer_points()
 
-## ----, message = FALSE---------------------------------------------------
+## ---- message = FALSE----------------------------------------------------
 library(dplyr)
 mtcars %>%
   ggvis(x = ~mpg, y = ~disp) %>%
