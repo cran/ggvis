@@ -1,7 +1,7 @@
-afae0b0db2b0a0157abf2740472750eb *DESCRIPTION
+b418cba688bbbf303bc16ffdeb353128 *DESCRIPTION
 9908b3d99b340de0174bcd8ac08b71de *LICENSE
 389e10a93bac2c4971786dce6dedc4f4 *NAMESPACE
-32cd293a726887397277c6d667a5bc86 *NEWS.md
+6e36d0e553e08e8e4fde28cde0671a88 *NEWS.md
 e969a304ff21088bd969c729530675b6 *R/broker.R
 d9f041b5a8d431e861e42fb5a0fbbc80 *R/compute_align.R
 0b1b9ea7a18738149696b4c84e6d3628 *R/compute_auto_group.R
@@ -25,7 +25,7 @@ efbeaf1e43128033ff90adc62342c99c *R/ggvis_html.R
 ead93c883fee60813d07f040712a149e *R/guide_legend.R
 a5e67622778940644f739c23b073f35c *R/guide_props.R
 2ef2cff936cb05b4942aa32b2bbd5e59 *R/handle.R
-3f722261a24691829a4ed7b32930ca05 *R/handle_brush.R
+9ff6dc50c4b6743cd7c6fa5797229608 *R/handle_brush.R
 d5f0b7d43d58be419abd4861934e8eea *R/handle_click.R
 55b86e37cecdb0e563b47baacc7a6e3b *R/handle_keyboard.R
 686419dbc8da9665f4b4333bbfdf711d *R/handle_resize.R
