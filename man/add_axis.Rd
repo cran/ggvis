@@ -5,11 +5,26 @@
 \alias{hide_axis}
 \title{Add a vega axis specification to a ggvis plot}
 \usage{
-add_axis(vis, type, scale = NULL, orient = NULL, title = NULL,
-  title_offset = NULL, format = NULL, ticks = NULL, values = NULL,
-  subdivide = NULL, tick_padding = NULL, tick_size_major = NULL,
-  tick_size_minor = tick_size_major, tick_size_end = tick_size_major,
-  offset = NULL, layer = "back", grid = TRUE, properties = NULL)
+add_axis(
+  vis,
+  type,
+  scale = NULL,
+  orient = NULL,
+  title = NULL,
+  title_offset = NULL,
+  format = NULL,
+  ticks = NULL,
+  values = NULL,
+  subdivide = NULL,
+  tick_padding = NULL,
+  tick_size_major = NULL,
+  tick_size_minor = tick_size_major,
+  tick_size_end = tick_size_major,
+  offset = NULL,
+  layer = "back",
+  grid = TRUE,
+  properties = NULL
+)
 
 hide_axis(vis, scale)
 }
@@ -35,7 +50,7 @@ title.}
 the title.}
 
 \item{format}{The formatting pattern for axis labels. Vega uses D3's format
-pattern: \url{https://github.com/mbostock/d3/wiki/Formatting}}
+pattern.}
 
 \item{ticks}{A desired number of ticks. The resulting number may be different
 so that values are "nice" (multiples of 2, 5, 10) and lie within the

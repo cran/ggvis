@@ -5,8 +5,15 @@
 \alias{hide_legend}
 \title{Add a vega legend specification to a ggvis plot}
 \usage{
-add_legend(vis, scales = NULL, orient = "right", title = NULL,
-  format = NULL, values = NULL, properties = NULL)
+add_legend(
+  vis,
+  scales = NULL,
+  orient = "right",
+  title = NULL,
+  format = NULL,
+  values = NULL,
+  properties = NULL
+)
 
 hide_legend(vis, scales)
 }
@@ -26,7 +33,7 @@ determines how the legend is positioned within the scene. The default is
 used in the legend. Use \code{""} to suppress the title.}
 
 \item{format}{The formatting pattern for axis labels. Vega uses D3's format
-pattern: \url{https://github.com/mbostock/d3/wiki/Formatting}}
+pattern.}
 
 \item{values}{Explicitly set the visible legend values.}
 
