@@ -1,6 +1,6 @@
 Package: ggvis
 Title: Interactive Grammar of Graphics
-Version: 0.4.9
+Version: 0.4.10
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@posit.co", role = c("aut", "cre")),
     person("Winston", "Chang", , "winston@posit.co", role = "aut"),
@@ -34,9 +34,9 @@ Suggests: knitr (>= 1.6), lubridate, MASS, mgcv, rmarkdown, testthat
         (>= 0.8.1)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 NeedsCompilation: no
-Packaged: 2024-02-05 16:06:23 UTC; hadleywickham
+Packaged: 2026-02-10 14:25:27 UTC; hadleywickham
 Author: Hadley Wickham [aut, cre],
   Winston Chang [aut],
   Posit [cph],
@@ -54,4 +54,4 @@ Author: Hadley Wickham [aut, cre],
   Sebastián Décima [ctb, cph] (javascript-detect-element-resize library)
 Maintainer: Hadley Wickham <hadley@posit.co>
 Repository: CRAN
-Date/Publication: 2024-02-05 22:10:06 UTC
+Date/Publication: 2026-02-10 14:50:02 UTC
